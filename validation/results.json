@@ -1,0 +1,158 @@
+{
+  "themes": {
+    "dev (rules were tuned on this set)": {
+      "n": 80,
+      "accuracy": 0.938
+    },
+    "holdout (never used for tuning)": {
+      "n": 60,
+      "accuracy": 0.867
+    },
+    "all": {
+      "n": 140,
+      "accuracy": 0.907
+    },
+    "holdout_per_category": {
+      "address_change": {
+        "manual_n": 2,
+        "recall": 1.0,
+        "precision": 1.0
+      },
+      "app_firmware": {
+        "manual_n": 8,
+        "recall": 0.75,
+        "precision": 0.75
+      },
+      "charging_battery_fault": {
+        "manual_n": 14,
+        "recall": 0.93,
+        "precision": 0.87
+      },
+      "connectivity_pairing": {
+        "manual_n": 4,
+        "recall": 1.0,
+        "precision": 1.0
+      },
+      "delivery_not_received": {
+        "manual_n": 8,
+        "recall": 1.0,
+        "precision": 0.89
+      },
+      "display_touch_defect": {
+        "manual_n": 1,
+        "recall": 1.0,
+        "precision": 1.0
+      },
+      "invoice_issue": {
+        "manual_n": 1,
+        "recall": 1.0,
+        "precision": 1.0
+      },
+      "order_cancellation": {
+        "manual_n": 4,
+        "recall": 0.75,
+        "precision": 1.0
+      },
+      "payment_issue": {
+        "manual_n": 4,
+        "recall": 0.75,
+        "precision": 1.0
+      },
+      "product_enquiry": {
+        "manual_n": 4,
+        "recall": 0.5,
+        "precision": 1.0
+      },
+      "return_refund_pickup": {
+        "manual_n": 4,
+        "recall": 0.75,
+        "precision": 1.0
+      },
+      "unclear": {
+        "manual_n": 1,
+        "recall": 1.0,
+        "precision": 0.5
+      },
+      "warranty_status_followup": {
+        "manual_n": 2,
+        "recall": 1.0,
+        "precision": 1.0
+      },
+      "wrong_or_damaged_item": {
+        "manual_n": 3,
+        "recall": 1.0,
+        "precision": 0.75
+      }
+    },
+    "holdout_errors": [
+      {
+        "ticket_id": "TK-242540",
+        "manual_label": "order_cancellation",
+        "theme": "wrong_or_damaged_item"
+      },
+      {
+        "ticket_id": "TK-254331",
+        "manual_label": "product_enquiry",
+        "theme": "app_firmware"
+      },
+      {
+        "ticket_id": "TK-242561",
+        "manual_label": "return_refund_pickup",
+        "theme": "delivery_not_received"
+      },
+      {
+        "ticket_id": "TK-243100",
+        "manual_label": "app_firmware",
+        "theme": "charging_battery_fault"
+      },
+      {
+        "ticket_id": "TK-245879",
+        "manual_label": "app_firmware",
+        "theme": "charging_battery_fault"
+      },
+      {
+        "ticket_id": "TK-251105",
+        "manual_label": "charging_battery_fault",
+        "theme": "audio_quality"
+      },
+      {
+        "ticket_id": "TK-244747",
+        "manual_label": "product_enquiry",
+        "theme": "app_firmware"
+      },
+      {
+        "ticket_id": "TK-250719",
+        "manual_label": "payment_issue",
+        "theme": "unclear"
+      }
+    ]
+  },
+  "metric_crosscheck": {
+    "agents_checked": 44,
+    "agents_mismatching": 0,
+    "max_abs_diff_csat": 0.0,
+    "max_abs_diff_median_handle_min": 0.0
+  },
+  "edge_cases": {
+    "empty_text_is_unclear": true,
+    "compat_question_with_word_advance": true,
+    "blank_csat_not_zero": true,
+    "agent_with_no_csat_is_nan": true,
+    "median_robust_to_5000min_outlier": true
+  },
+  "data_quality": {
+    "rows_raw": 11750,
+    "duplicate_tickets_dropped": 0,
+    "legacy_resolved_at_shifted": 3189,
+    "negative_handle_time_after_fix": 0,
+    "unknown_agent_ids": 0,
+    "lot_resolved_pct": 92.1,
+    "lot_ambiguous_fallback": 933,
+    "ticket_before_order_date": 255,
+    "rows": 11750,
+    "missing_csat": 6554,
+    "missing_handle": 567,
+    "missing_customer": 0,
+    "junk_text": 27
+  }
+}
